@@ -30,6 +30,17 @@
             <el-menu-item index="/DeptInsert">院系信息录入</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
+      <el-submenu index="3">
+          <template slot="title">
+            <i class="el-icon-location"></i>
+            <span>教师管理</span>
+          </template>
+          <el-menu-item-group>
+            <template slot="title">教师信息</template>
+            <el-menu-item index="/TeacherOp">教师信息查看</el-menu-item>
+            <el-menu-item index="/TeacherInsert">教师信息录入</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
       <!-- <el-menu-item index="2">
         <i class="el-icon-menu"></i>
         <span slot="title">导航二</span>
