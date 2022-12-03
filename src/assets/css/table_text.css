@@ -1,0 +1,23 @@
+.el-table .warning-row {
+    background: rgb(47, 47, 47);
+  }
+    .el-table .success-row {
+    background: rgb(43, 43, 43);
+  }
+
+  .el-table--border, .el-table--group{
+    border: 0 !important;
+  }
+
+  
+  .el-table td.el-table__cell, .el-table th.el-table__cell.is-leaf{
+    border: 0;
+    border-bottom: 0 !important;
+  }
+  .el-table th.el-table__cell.is-leaf{
+    background-color: rgb(43, 43, 43);
+  }
+  .el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: rgb(55, 55, 55) !important;
+  }
+
