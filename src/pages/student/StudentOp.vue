@@ -93,7 +93,7 @@
 
 <script>
 import {getStudentInfo,findSpecialInfo,modifyInfo,deleteInfo} from '@/api/student.js'
-import {formateDate} from '@/api/student.js'
+import {formateDate} from '@/utils/time.js'
 export default {
   name:'StudentOp',
   data(){
