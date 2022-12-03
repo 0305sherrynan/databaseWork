@@ -14,7 +14,14 @@ const routes = [
     
     {
         path:'/DeptInsert',component:()=>import('@/pages/dept/DeptInsert.vue')   
+    },
+    {
+        path:'/TeacherOp',component:()=>import('@/pages/teacher/TeacherOp.vue')
+    },
+    {
+        path:'/TeacherInsert',component:()=>import('@/pages/teacher/TeacherInsert.vue')
     }
+
 ]
 const router = new VueRouter({routes})
 export default router
