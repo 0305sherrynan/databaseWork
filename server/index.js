@@ -12,10 +12,12 @@ app.use(bodyParser.urlencoded({ extended: true}));
 const course = require('./api/course.js')
 const student = require('./api/student.js')
 const dept = require('./api/dept.js')
+const teacher = require('./api/teacher.js')
 //使用接口
 app.use('/api/course',course)
 app.use('/api/student',student)
 app.use('/api/dept',dept)
+app.use('/api/teacher',teacher)
 
 app.get('/zwz',(req,res)=>{
     res.send('当前服务器已连接')
