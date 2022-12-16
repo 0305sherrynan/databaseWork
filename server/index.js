@@ -14,12 +14,14 @@ const student = require('./api/student.js')
 const dept = require('./api/dept.js')
 const teacher = require('./api/teacher.js')
 const grade = require('./api/grade.js')
+const statistics = require('./api/statistics.js')
 //使用接口
 app.use('/api/course',course)
 app.use('/api/student',student)
 app.use('/api/dept',dept)
 app.use('/api/teacher',teacher)
 app.use('/api/grade',grade)
+app.use('/api/statistics',statistics)
 
 app.get('/zwz',(req,res)=>{
     res.send('当前服务器已连接')
