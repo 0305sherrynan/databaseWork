@@ -11,14 +11,10 @@
 
 <script>
 import LeftDiv from './components/LeftDiv.vue'
-import {getCourseInfo} from '@/api/index.js'
+// import {getCourseInfo} from '@/api/index.js'
 export default {
   
   name: 'App',
-  async mounted(){
-     const data = await getCourseInfo()
-     console.log(data)
-  },
   components: {
     LeftDiv
   }
