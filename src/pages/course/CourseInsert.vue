@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <el-button type="text" @click="dialogFormVisible = true">打开嵌套表单的 Dialog</el-button>
+  <div class="topBox">
+    <div class="enterInfo"><el-button type="text" @click="dialogFormVisible = true" class="enterBtn">点击进行录入</el-button></div>
 
     <el-dialog :append-to-body="true" title="修改信息" :visible.sync="dialogFormVisible" class="thisblack-bgc">
             <el-form :model="form" class="flexForm">
@@ -72,6 +72,18 @@ export default {
 </script>
 
 <style scoped>
+.topBox{
+    position: relative;
+    width: 762px;
+    height: 500px;
+}
+.enterInfo{
+    /* font-size: 20px; */
+        position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+}
 .thisblack-bgc{
     /* height: 1000px; */
 }
@@ -80,6 +92,9 @@ export default {
     height: 100%;
     flex-direction: row;
     flex-wrap: wrap
+}
+ ::v-deep .enterInfo>.el-button>span{
+    font-size: 30px;
 }
 ::v-deep .el-dialog{
     /* display: flex; */
