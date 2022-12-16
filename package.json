@@ -10,10 +10,13 @@
   "dependencies": {
     "axios": "^1.2.0",
     "core-js": "^3.8.3",
+    "echarts": "^5.4.1",
     "element-ui": "^2.15.12",
+    "file-saver": "^2.0.5",
     "mysql": "^2.18.1",
     "nodemon": "^2.0.20",
-    "vue": "^2.6.14"
+    "vue": "^2.6.14",
+    "xlsx": "^0.17.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
