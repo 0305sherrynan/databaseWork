@@ -7,6 +7,7 @@
       background-color="#545c64"
        text-color="#fff"
        router
+       unique-opened
       >
       <el-submenu index="1">
         <template slot="title">
@@ -39,6 +40,38 @@
             <template slot="title">教师信息</template>
             <el-menu-item index="/TeacherOp">教师信息查看</el-menu-item>
             <el-menu-item index="/TeacherInsert">教师信息录入</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="4">
+          <template slot="title">
+            <i class="el-icon-location"></i>
+            <span>课程管理</span>
+          </template>
+          <el-menu-item-group>
+            <template slot="title">课程信息</template>
+            <el-menu-item index="/CourseOp">课程信息查看</el-menu-item>
+            <el-menu-item index="/CourseInsert">课程信息录入</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="5">
+          <template slot="title">
+            <i class="el-icon-location"></i>
+            <span>成绩管理</span>
+          </template>
+          <el-menu-item-group>
+            <template slot="title">成绩信息</template>
+            <el-menu-item index="/GradeOp">成绩信息查看</el-menu-item>
+            <el-menu-item index="/GradeInsert">成绩信息录入</el-menu-item>
+        </el-menu-item-group>
+      </el-submenu>
+      <el-submenu index="6">
+          <template slot="title">
+            <i class="el-icon-location"></i>
+            <span>成绩报单</span>
+          </template>
+          <el-menu-item-group>
+            <template slot="title">成绩单信息</template>
+            <el-menu-item index="/ReportForm">成绩单查看</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
       <!-- <el-menu-item index="2">
