@@ -70,7 +70,7 @@
 <script>
 // import {getDeptInfo,findSpecialInfo,modifyInfo,deleteInfo} from '@/api/dept.js'
 import {getDeptInfo,deleteInfo,modifyInfo,findSpecialInfo} from '@/api/dept.js'
-import {formateDate} from '@/api/student.js'
+import {formateDate} from '@/utils/time.js'
 export default {
   name:'DeptOp',
   data(){
