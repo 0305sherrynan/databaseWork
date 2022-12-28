@@ -2,7 +2,7 @@
   <div class="topBox">
     <div class="enterInfo"><el-button type="text" @click="dialogFormVisible = true" class="enterBtn">点击进行录入</el-button></div>
 
-    <el-dialog :append-to-body="true" title="收货地址" :visible.sync="dialogFormVisible" class="thisblack-bgc">
+    <el-dialog :append-to-body="true" title="学生信息录入" :visible.sync="dialogFormVisible" class="thisblack-bgc">
             <el-form :model="form" class="flexForm">
                 <el-form-item label="学号" :label-width="formLabelWidth">
                     <el-input v-model="form.sno" autocomplete="off"></el-input>

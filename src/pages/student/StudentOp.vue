@@ -62,7 +62,7 @@
               </template>
             </el-table-column>
       </el-table>
-      <el-dialog :append-to-body="true" title="收货地址" :visible.sync="dialogFormVisible" class="thisblack-bgc">
+      <el-dialog :append-to-body="true" title="编辑学生信息" :visible.sync="dialogFormVisible" class="thisblack-bgc">
           <el-form :model="singalInfo" class="flexForm">
               <el-form-item label="学号" :label-width="formLabelWidth">
                   <el-input v-model="singalInfo.sno" :placeholder="singalInfo.sno" autocomplete="off" class="popWinInput"></el-input>
@@ -160,6 +160,7 @@ export default {
       async makesureBtn(){
           const id = this.uid
           const {data:res} = await modifyInfo({id,...this.singalInfo})
+          this.dialogFormVisible = false
           console.log(res)
       },
       //删除数据

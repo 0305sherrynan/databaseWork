@@ -179,6 +179,7 @@ export default {
       async makesureBtn(){
           const id = this.uid
           const {data:res} = await modifyInfo({id,...this.singalInfo})
+          this.dialogFormVisible = false
           console.log(res)
       },
       //删除数据
