@@ -5,7 +5,7 @@
             <div><span>查询学生成绩</span></div>
             <div><el-input v-model="search_cno" placeholder="请输入课程号" @keyup.enter.native="searchData"></el-input></div>
           </div>
-          <div  class="courseInfoList">
+          <div  class="courseInfoList" v-if="courseInfo!==undefined">
               <div v-for="(item,index) in Object.keys(courseInfo)" :key="index" class="courseInfoListEach">
                 <span>{{showList[item]}}:{{courseInfo[item]}}</span>
               </div>
@@ -148,13 +148,23 @@ export default {
       //索引数据
       async searchData(){
         const {data:res} =  await findSpecialInfo('cno',this.search_cno)
+        // for(const item of this.sectorSc){
+        //     item.value = 0
+        //   }
+        this.tableDataNew = []
         this.courseInfo = res.result.result[0]
-            this.courseInfo.shour = formateDate(this.courseInfo.shour)
-    this.courseInfo.test_hour = formateDate(this.courseInfo.test_hour)
-        const {data:res1} = await searchGradeByCno(this.search_cno)
-        console.log(res1)
-        this.tableDataNew = res1.result.result
+        console.log(this.courseInfo)
+        if (this.courseInfo !== undefined){
+                  console.log(123)
+                  this.courseInfo.shour = formateDate(this.courseInfo.shour)
+                  this.courseInfo.test_hour = formateDate(this.courseInfo.test_hour)
+                  const {data:res1} = await searchGradeByCno(this.search_cno)
+                  console.log(res1)
+                  this.tableDataNew = res1.result.result
+                 
+        }
         this.graphCreate(this.tableDataNew)
+
       },
       //右下饼图生成
       graphCreate(res1){
